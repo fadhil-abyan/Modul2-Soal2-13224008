@@ -58,9 +58,15 @@ void terhimpit(Node** head){
 int main(){
     Node* head = NULL;
     int tinggi;
+    char b;
 
     while(1){
-        if(scanf("%d", &tinggi) != 1) break;
+        scanf("%d", &tinggi);
+        scanf("%c", &b);
+
+        if(b != ' '){
+            break;
+        }
         add(&head, tinggi);
     }
 
