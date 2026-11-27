@@ -35,12 +35,15 @@ void terhimpit(Node** head){
     Node* current = *head;
     current = current->next;
     int flag = 0;
-    int index = 1;
+    int index = 2;
 
     while(current != NULL){
         if(current->tinggi < current->prev->tinggi && current->tinggi < current->next->tinggi){
-            printf("%d ", index);
+            printf("%d", index);
             flag = 1;
+            if(current->next->next != NULL){
+                printf(" ");
+            }
         }
 
         current = current->next;
